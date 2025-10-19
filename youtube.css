@@ -1,0 +1,419 @@
+:root {
+    --naviconsbg: rgb(238, 238, 238);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*Nav section ___----------------________----__--_-------------*/
+nav{
+    border: none;
+    background-color: rgb(247, 247, 247);
+    backdrop-filter: blur(50%);
+}
+nav ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+#yt {
+    display: flex;
+    gap: 0.3rem;
+    letter-spacing: 0;
+}
+
+#yt i {
+    color: red;
+}
+
+#yt button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+}
+
+#yt button:hover {
+    cursor: pointer;
+    background-color: var(--naviconsbg);
+}
+
+
+nav ul li input {
+    border-radius: 1.5rem;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 0.2rem;
+    outline: none;
+    width: clamp(4rem, 6vw, 7rem);
+}
+
+.icon {
+    position: relative;
+}
+
+.search {
+    padding: 0.7rem;
+}
+
+.icon i {
+    border:none;
+     border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+        height:90%;
+        background-color: rgb(220, 220, 220);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    position: absolute;
+    left: 103%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-130%);
+    font-size: clamp(0.7rem, 0.8rem, 1.5vw);
+}
+
+nav #create {
+    border: none;
+    background-color: var(--naviconsbg);
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    gap: 0.3rem;
+}
+
+
+#bell {
+    border: none;
+    padding: 0.4rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+
+/*Main section----------------_-_----_-_-_-_-_-_-_-_-_-_--_____*/
+.container {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.second p {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.second p:hover {
+    background-color: var(--naviconsbg);
+}
+
+.home,
+.shorts,
+.sub,
+.two,
+.playlist,
+.videos,
+.later,
+.like,
+.subs {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+}
+
+.home:hover,
+.shorts:hover,
+.sub:hover,
+.two:hover,
+.playlist:hover,
+.videos:hover,
+.later:hover,
+.like:hover,
+.subs:hover {
+    background-color: var(--naviconsbg);
+    cursor: pointer;
+}
+
+.channels {
+    border: none;
+    border-radius: 0.5rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    font-size: 0.7rem;
+}
+
+.channels:hover {
+    background-color: var(--naviconsbg);
+}
+
+.channels img {
+    max-width: 1.2rem;
+    max-height: 1.2rem;
+    border-radius: 50%;
+}
+
+.more {
+    display: flex;
+    font-size: 0.7rem;
+    align-items: center;
+    gap: 1.3rem;
+
+    border-radius: 0.3rem;
+    height: 1.5rem;
+    padding: 0.1rem;
+}
+
+.more:hover {
+    background-color: var(--naviconsbg);
+}
+
+
+
+
+
+
+main {
+    border: none;
+    width: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main .cubes {
+    border: none;
+
+    max-width: 100%;
+    overflow-x: auto;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-left: 1rem;
+}
+main .cubes p:nth-child(1){
+    background-color: grey;
+}
+
+.cubes p {
+    border: none;
+    background-color: var(--naviconsbg);
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    transition: all 0.1s ease;
+}
+
+.cubes p:hover {
+    cursor: pointer;
+    background-color: rgb(200, 200, 200);
+}
+
+aside {
+    border: none;
+    width: 30%;
+    padding: 0.5rem;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+aside.show {
+    margin: 0;
+    padding: 0;
+    width: 0;
+
+}
+
+.grid {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    justify-content: center;
+    gap: 3;
+}
+
+.grid article {
+    border: none;
+    padding: 0.7rem;
+    height: 9rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid article:hover {
+    background-color: rgb(225, 224, 224);
+
+}
+
+.grid article p {
+    font-size: 0.5rem;
+    margin: 0;
+}
+
+.grid article p:nth-child(3) {
+    margin-top: 0.2rem;
+}
+
+
+.video img {
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+hr{
+    border:0.7px solid rgb(208, 208, 208);
+}
+
+
+
+
+
+@media (min-width: 820px) {
+    .grid article {
+        width: 13rem;
+        height: 8rem;
+    }
+}
+
+@media (min-width:1024px) {
+    #input input {
+        padding-left: 1.3rem;
+    }
+
+    .more,
+    .channels p {
+        font-size: 1rem;
+    }
+
+    .subs p{
+        font-size: 1.1rem;
+    }
+
+    .home,
+    .shorts,
+    .sub,
+    .two,
+    .playlist,
+    .videos,
+    .later,
+    .like,
+    .subs {
+        font-size: 0.9rem;
+        color:rgb(45, 45, 45);
+    }
+
+    .grid article p {
+        font-size: 0.9rem;
+    }
+
+    .video img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .grid article {
+        border: none;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin: 1.3rem;
+        width: 20rem;
+        height: 11.5rem;
+
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3;
+
+    }
+
+    #input input {
+        width: 35rem;
+        height: 1.8rem;
+    }
+
+    .icon i {
+        width:2.5rem;
+        font-size: 1.1rem;
+        border:none;
+        background-color: rgb(220, 220, 220);
+        height:100%;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon i:hover{
+        background-color: rgb(174, 174, 174);
+         cursor: pointer;
+    }
+
+    nav #create {
+        font-size: 1rem;
+        padding: 0.5rem
+    }
+    #create:hover{
+        background-color: rgb(205, 205, 205);
+        cursor: pointer;
+    }
+
+    #bell {
+        font-size: 1.1rem;
+        background-color: rgb(222, 222, 222);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:0.7rem;
+    }
+    #bell:hover{
+        background-color: rgb(198, 198, 198);
+    }
+
+    #yt {
+        font-size: 1.4rem;
+        ;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    aside {
+        width: 20%;
+        margin-left:1.5rem;
+    }
+
+}
